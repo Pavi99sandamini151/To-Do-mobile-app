@@ -2,15 +2,13 @@ import { StatusBar } from 'expo-status-bar';
 import React  from 'react';
 import { StyleSheet, Text , TouchableOpacity , View } from 'react-native';
 
-export default function TodoItem(item , pressHandler){
+export default function TodoItem(item , {pressHandler}){
     return(
-        <View>
-        {/* <TouchableOpacity onPress={() => pressHandler(item.key)}> */}
-            <TouchableOpacity>
-            <Text style={styles.item}>{item.text}</Text>
-        </TouchableOpacity>
-        <StatusBar style="auto" />
-        </View>
+        
+        <TouchableOpacity onPress={() => pressHandler(item.key)}>
+      <Text style={styles.item}>{item.text}</Text>
+    </TouchableOpacity>
+       
     )
 }
 
