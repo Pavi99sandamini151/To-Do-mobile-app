@@ -4,6 +4,7 @@ import { StyleSheet, Text, View , FlatList, Alert , TouchableWithoutFeedback , K
 import Header from './components/header';
 import TodoItem from './components/todoitem';
 import AddTodo from './components/addTodo';
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 export default function App() {
   const [todos, setTodos] = useState([
@@ -39,6 +40,7 @@ export default function App() {
   };
 
   return (
+    
       <TouchableWithoutFeedback  onPress={()=> {
         Keyboard.dismiss();
         console.log('Dismissed Keyboard');
@@ -72,6 +74,7 @@ const styles = StyleSheet.create({
   },
   content:{
     padding:40,
+    // backgroundColor:'pink',
 
   },
   list:{
